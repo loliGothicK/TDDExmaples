@@ -3,12 +3,6 @@ using System.Collections.Generic;
 
 namespace Cranberries.Util
 {
-    public class DynamicCast<E> {
-        E value;
-        public E Get => value;
-        public DynamicCast(Object a) => value = (E)a;
-    }
-
     public class MockedTestExamples<E> : TestExamples
     {
         private bool TwiceFlag { get; set; }
@@ -38,9 +32,9 @@ namespace Cranberries.Util
             Plus(Twice(a), Twice(b));
 
             var x = (E)((Object)a);
-            var y = new DynamicCast<E>(b).Get;
+            var y = DynamicCast.DefaultCast<E>(b);
 
-            return new DynamicCast<T>(mockupCase[(x, y)]).Get;
+            return DynamicCast.DefaultCast<T>(mockupCase[(x, y)]);
         }
 
         public bool VerifyAll

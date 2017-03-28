@@ -11,7 +11,7 @@ namespace Cranberries.Util
                years % 4 == 0 ? "YES" :
                /* else */         "NO";
 
-        public virtual T DoSmoething<T>(T a)
+        public virtual T DoSomething<T>(T a)
         {
             return ExternalMethod(a);
         }

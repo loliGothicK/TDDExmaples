@@ -1,19 +1,20 @@
 ﻿using System;
+using Cranberries.Util;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProject1
 {
-    public class SpiedTest<E> : Cranberries.Util.TestExamples
+    public class SpiedTest<E> : TestExamples
     {
         private E sypiedValue;
 
         public E SypiedValue { get => sypiedValue; }
 
-        public E DoSomething(E a) {
-            var multi = Cranberries.Util.Operator<E>.Multiply;
+        public override T DoSomething<T>(T a) {
+            var multi = Operator<T>.Multiply;
             a = multi(a, a);
-            sypiedValue = a;
-            return base.DoSmoething(a);
+            sypiedValue = DynamicCast.DefaultCast<E>(a);
+            return base.DoSomething(a);
         }
     }
     [TestClass]

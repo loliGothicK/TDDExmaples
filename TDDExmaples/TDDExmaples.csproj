@@ -54,6 +54,7 @@
     <Compile Include="A.cs" />
     <Compile Include="B.cs" />
     <Compile Include="C.cs" />
+    <Compile Include="DynamicCast.cs" />
     <Compile Include="Enumarables.cs" />
     <Compile Include="External.cs" />
     <Compile Include="Mocked.cs" />
