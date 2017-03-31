@@ -32,9 +32,9 @@ namespace Cranberries.Util
             Plus(Twice(a), Twice(b));
 
             var x = (E)((Object)a);
-            var y = DynamicCast.DefaultCast<E>(b);
+            var y = ConvertTo<E>.Accept(b);
 
-            return DynamicCast.DefaultCast<T>(mockupCase[(x, y)]);
+            return ConvertTo<T>.Accept(mockupCase[(x, y)]);
         }
 
         public bool VerifyAll

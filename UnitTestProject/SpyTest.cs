@@ -13,7 +13,7 @@ namespace UnitTestProject1
         public override T DoSomething<T>(T a) {
             var multi = Operator<T>.Multiply;
             a = multi(a, a);
-            sypiedValue = DynamicCast.DefaultCast<E>(a);
+            sypiedValue = ConvertTo<E>.Accept(a);
             return base.DoSomething(a);
         }
     }

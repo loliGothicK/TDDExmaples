@@ -6,10 +6,10 @@ namespace Cranberries.Util
     public class TestExamples
     {
         public static String IsLeap(int years)
-            => years % 400 == 0 ? "YES" :
-               years % 100 == 0 ? "NO" :
-               years % 4 == 0 ? "YES" :
-               /* else */         "NO";
+            => years % 400 ==0 ? "YES" :
+            years % 100 == 0 ? "NO" : 
+            years % 4 == 0 ? "YES" : "NO";
+
 
         public virtual T DoSomething<T>(T a)
         {

@@ -56,7 +56,6 @@
   <ItemGroup>
     <Compile Include="DummyObjectTest.cs" />
     <Compile Include="FakeTest.cs" />
-    <Compile Include="IsLeapTest1.cs" />
     <Compile Include="MockTest.cs" />
     <Compile Include="SpyTest.cs" />
     <Compile Include="StubDriverTest.cs" />
